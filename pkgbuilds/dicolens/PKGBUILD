@@ -1,5 +1,5 @@
 pkgname=dicolens
-pkgver=0.6.0
+pkgver=0.6.1
 pkgrel=1
 pkgdesc='Look through DICOM scans: CT, MR, X-ray, ultrasound, and hospital CDs'
 arch=('x86_64' 'aarch64')
@@ -11,7 +11,7 @@ makedepends=('cmake' 'gcc' 'make')
 # The window test draws text, and the CI container has no fonts until one is listed.
 checkdepends=('ttf-dejavu')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('01fb8f53f1cbbe9fbe8542eadc7d452fe201340ca5a8500ded91232e11e0fb9d')
+sha256sums=('fd6d172f477bf4b49638768ce2643989e4ac0f60619cf9292c2f98ff0f7e74f1')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
