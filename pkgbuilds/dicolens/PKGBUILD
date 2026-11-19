@@ -1,17 +1,17 @@
 pkgname=dicolens
-pkgver=0.2.1
+pkgver=0.3.0
 pkgrel=1
 pkgdesc='Look through DICOM scans: CT, MR, X-ray, ultrasound, and hospital CDs'
 arch=('x86_64' 'aarch64')
 url='https://github.com/yamz8/dicolens'
 license=('MIT')
 options=('!debug')
-depends=('ffmpeg' 'hicolor-icon-theme' 'qt6-base' 'qt6-declarative' 'qt6-svg' 'qt6-wayland' 'xdg-desktop-portal' 'zlib')
+depends=('ffmpeg' 'hicolor-icon-theme' 'qt6-base' 'qt6-declarative' 'qt6-svg' 'qt6-wayland' 'xdg-desktop-portal' 'xdg-utils' 'zlib')
 makedepends=('cmake' 'gcc' 'make')
 # The window test draws text, and the CI container has no fonts until one is listed.
 checkdepends=('ttf-dejavu')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('4959a21e54c1140cb5191176f6a946925053a8a4119dfb81bac7b0e417e4cc4d')
+sha256sums=('d541f6f9b5eaf3bfd0664879b7c1ea0e30362203649966613e6446d87e1909ea')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
